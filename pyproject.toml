@@ -1,0 +1,40 @@
+[build-system]
+requires = ['setuptools', 'wheel', 'simplifiedapp']
+build-backend = 'setuptools.build_meta:__legacy__'
+
+[project]
+name = 'pathlib_vfs.google'
+dynamic = ['version', 'description', 'readme']
+requires-python = '>=3.7'
+authors = [
+	{ name = 'Irving Leonard', email = 'irvingleonard@gmail.com'}
+]
+keywords = ['pathlib', 'google', 'drive']
+license = {text = 'BSD 3-Clause "New" or "Revised" License'}
+classifiers = [
+	'Development Status :: 4 - Beta',
+	'Environment :: Console',
+	'Intended Audience :: Developers',
+	'Intended Audience :: End Users/Desktop',
+	'License :: OSI Approved :: BSD License',
+	'Natural Language :: English',
+	'Operating System :: OS Independent',
+	'Programming Language :: Python',
+	'Programming Language :: Python :: 3',
+	'Topic :: Internet :: WWW/HTTP',
+	'Topic :: System :: Filesystems',
+]
+dependencies = [
+	'google-api-python-client',
+	'google-auth-httplib2',
+	'google-auth-oauthlib',
+	'pathlib_alt',
+]
+
+[project.urls]
+homepage = 'https://github.com/irvingleonard/pathlib_google'
+# documentation = 'https://github.com/irvingleonard/pathlib_google'
+repository = 'https://github.com/irvingleonard/pathlib_google.git'
+
+[tool.setuptools.packages.find]
+include = ['pathlib_vfs*']
