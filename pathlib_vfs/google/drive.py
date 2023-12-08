@@ -16,7 +16,7 @@ class PureGoogleDrivePath(BasePurePath):
 
 	This path format is then not applicable to anything Google Drive related outside this module, but should be good enough for most cases. The convention is as follows:
 	- the "/" character is assumed to be the separator. Folder/files/drives with "/" in the name will break this (Google Drive will hapily create such content).
-	- there's the concept of "Shared Drives" which comes to be similar of how "drives" work in Windows. A set of double separators '//' at the beginning of the path signals the use of drives, and the name will be assumed as everything until the next ocurrence of "//". A set of "//" anywhere else on the path would only yield an empty part.
+	- there's the concept of "Shared Drives" which comes to be similar of how "drives" work in Windows. A set of double separators '//' at the beginning of the path signals the use of drives, and the name will be assumed as everything until the next ocurrence of "//". A set of "//" anywhere else on the path would only yield an empty part. A drive with "//" in the name will break this convention, and Google won't limit such name.
 	'''
 
 	DRIVE_SUPPORTED = True
